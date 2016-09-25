@@ -13,15 +13,20 @@
         <property name="connection.password">123456</property>
 
         <!-- DB schema will be updated if needed -->
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create</property>
 
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 
 
-        <mapping class="com.xx.hbm.entity.Book" />
-        <mapping class="com.xx.hbm.entity.Student" />
+        <mapping class="com.xx.hbm.entity.School" />
+        <!--<mapping class="com.xx.hbm.entity.Book" />-->
+        <!--<mapping class="com.xx.hbm.entity.Student" />-->
+        <!--<mapping class="com.xx.hbm.entity.City" />-->
+        <!--<mapping class="com.xx.hbm.entity.Province" />-->
+
+
 
     </session-factory>
 </hibernate-configuration>

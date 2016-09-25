@@ -30,6 +30,22 @@ public class Book {
     @Type(type = "text")
     private String content;
 
+
+    /**
+     * Book实体类持有Student类的引用
+     * t_book表持有stu_id字段与t_student表的主键id进行关联
+     */
+
+    /**
+     * 级联风格
+     * CascadeType.PERSIST 级联保存
+     * CascadeType.MERGE 级联更新
+     */
+    @ManyToOne
+//    @JoinColumn(name = "stu_id")
+    private Student student;
+
+
     public Book() {}
 
     public Book(BookTypeEnum bookType, String title, String author, String content) {
@@ -89,5 +105,13 @@ public class Book {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
     }
 }
